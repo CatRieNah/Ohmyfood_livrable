@@ -304,6 +304,9 @@ header .fa-arrow-left {
   list-style: none;
   padding: 0;
 }
+.menu .btn-order {
+  text-align: center;
+}
 
 .menu li {
   background-color: #fff;
@@ -315,6 +318,10 @@ header .fa-arrow-left {
   margin: 25px 0;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
+}
+.menu li:hover button {
+  margin-right: 0;
 }
 .menu li .price {
   color: #353535;
@@ -322,7 +329,7 @@ header .fa-arrow-left {
   font-size: 15px;
   position: relative;
   margin-left: auto;
-  top: 40px;
+  top: 35px;
   right: 15px;
 }
 .menu li button {
@@ -331,6 +338,7 @@ header .fa-arrow-left {
   background-color: #99E2D0;
   border: none;
   margin-right: -60px;
+  transition: margin-right 0.4s ease-in-out;
 }
 .menu li button i {
   width: 20px;
@@ -344,12 +352,20 @@ header .fa-arrow-left {
 }
 
 .menu-description {
-  margin: 15px;
+  margin: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
 }
 .menu-description h3 {
-  font-size: 18px;
   font-weight: 500;
   margin-bottom: 5px;
+  font-weight: 18px;
+}
+.menu-description h3, .menu-description p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -351,6 +351,10 @@ header{
             padding: 0;
         }
     }
+
+    .btn-order{
+        text-align: center;
+    }
 }
 
 .menu{
@@ -366,6 +370,11 @@ header{
         margin:25px 0;
         overflow: hidden;
         position: relative;
+        cursor: pointer;
+
+        &:hover button{
+            margin-right: 0;
+        }
 
         .price{
             color: $dark-color;
@@ -373,10 +382,8 @@ header{
             font-size: 15px;
             position: relative;
             margin-left: auto;
-            top: 40px;
-            right: 15px;
-          
-            
+            top: 35px;
+            right: 15px;  
         }
 
         button{
@@ -385,6 +392,7 @@ header{
             background-color: $tertiary-color;
             border: none;
             margin-right: -60px;
+            transition: margin-right .4s ease-in-out;
 
             i{
                width: 20px;
@@ -401,12 +409,21 @@ header{
 }
 
 .menu-description{
-    margin: 15px;
+    margin: 10px;
+    overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
 
     h3{
-        font-size: 18px;
         font-weight: 500;
         margin-bottom: 5px;
+        font-weight: 18px;
+    }
+
+    h3,p{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
     }
 }
 
