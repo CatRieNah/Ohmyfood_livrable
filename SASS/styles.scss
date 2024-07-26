@@ -312,6 +312,7 @@ header{
         font-size: 23px;
         font-weight: 400;
         color: #101010;
+        animation: size .6s ease-in;
 
         &::after{
             content: "\f004";
@@ -361,16 +362,28 @@ header{
     li{
         background-color:$light-color;
         border-radius: 15px;
-        height: 70px;
+        height: 72px;
         display: flex;
         justify-content: space-between;
-        //align-items: center;
+        align-items: center;
         //box-shadow: 0 4px 15px rgba(0,0,0,.1);
         filter: drop-shadow(0 4px 15px rgba(0,0,0,.1));
         margin:25px 0;
         overflow: hidden;
         position: relative;
         cursor: pointer;
+        animation: move-down 1s ease-in-out;
+
+        &:nth-child(1){
+            animation-delay: 0s;
+        }
+
+        &:nth-child(2){
+            animation-delay: 0.2s;
+        }
+        &:nth-child(3){
+            animation-delay: 0.4s;
+        }
 
         &:hover button{
             margin-right: 0;
@@ -382,16 +395,16 @@ header{
             font-size: 15px;
             position: relative;
             margin-left: auto;
-            top: 35px;
-            right: 15px;  
+            top: 13px;
+            right: 15px; 
         }
 
         button{
-            width: 60px;
+            width: 15%;
             height: 100%;
             background-color: $tertiary-color;
             border: none;
-            margin-right: -60px;
+            margin-right: -15%;
             transition: margin-right .4s ease-in-out;
 
             i{
@@ -409,10 +422,12 @@ header{
 }
 
 .menu-description{
-    margin: 10px;
+    margin: 15px;
     overflow: hidden;
-        text-overflow: ellipsis;
-        text-wrap: nowrap;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    width: 80%;
+
 
     h3{
         font-weight: 500;
@@ -427,5 +442,24 @@ header{
     }
 }
 
+@keyframes move-down{
+    from {
+        opacity: 0;
+        transform: translateY(-100vh) scale(0); //départ vers le haut de l'écran
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);// arrivée à la position initiale 
+    }
+}
+
+@keyframes size{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
 
 

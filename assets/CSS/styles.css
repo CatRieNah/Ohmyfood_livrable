@@ -272,6 +272,7 @@ header .fa-arrow-left {
   font-size: 23px;
   font-weight: 400;
   color: #101010;
+  animation: size 0.6s ease-in;
 }
 .menu h1::after {
   content: "\f004";
@@ -311,14 +312,25 @@ header .fa-arrow-left {
 .menu li {
   background-color: #fff;
   border-radius: 15px;
-  height: 70px;
+  height: 72px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.1));
   margin: 25px 0;
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  animation: move-down 1s ease-in-out;
+}
+.menu li:nth-child(1) {
+  animation-delay: 0s;
+}
+.menu li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.menu li:nth-child(3) {
+  animation-delay: 0.4s;
 }
 .menu li:hover button {
   margin-right: 0;
@@ -329,15 +341,15 @@ header .fa-arrow-left {
   font-size: 15px;
   position: relative;
   margin-left: auto;
-  top: 35px;
+  top: 13px;
   right: 15px;
 }
 .menu li button {
-  width: 60px;
+  width: 15%;
   height: 100%;
   background-color: #99E2D0;
   border: none;
-  margin-right: -60px;
+  margin-right: -15%;
   transition: margin-right 0.4s ease-in-out;
 }
 .menu li button i {
@@ -352,10 +364,11 @@ header .fa-arrow-left {
 }
 
 .menu-description {
-  margin: 10px;
+  margin: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   text-wrap: nowrap;
+  width: 80%;
 }
 .menu-description h3 {
   font-weight: 500;
@@ -366,6 +379,25 @@ header .fa-arrow-left {
   overflow: hidden;
   text-overflow: ellipsis;
   text-wrap: nowrap;
+}
+
+@keyframes move-down {
+  from {
+    opacity: 0;
+    transform: translateY(-100vh) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes size {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
