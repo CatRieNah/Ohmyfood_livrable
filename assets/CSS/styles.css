@@ -40,6 +40,7 @@ a {
 .section-title {
   font-size: 24px;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 
 img {
@@ -110,6 +111,7 @@ header img {
   gap: 20px;
   margin-bottom: 30px;
   position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
 .list-item::before {
@@ -208,6 +210,7 @@ header img {
 .card-text h3 {
   font-size: 18px;
   margin-bottom: 5px;
+  font-weight: 700;
 }
 .card-text p {
   font-size: 17px;
@@ -272,6 +275,7 @@ header .fa-arrow-left {
   font-size: 23px;
   font-weight: 400;
   color: #101010;
+  cursor: pointer;
   animation: size 0.6s ease-in;
 }
 .menu h1::after {
@@ -398,6 +402,110 @@ header .fa-arrow-left {
   to {
     transform: scale(1);
   }
+}
+/*MEDIA QUERIES/DESKTOP*/
+@media (min-width: 1024px) {
+  .location {
+    box-shadow: none;
+  }
+  .intro {
+    margin-top: 0;
+    padding: 25px;
+  }
+  .intro h1 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .intro p {
+    font-size: 18px;
+  }
+  .steps {
+    padding: 50px 180px;
+  }
+  .steps ol {
+    display: flex;
+    gap: 35px;
+  }
+  .steps ol .list-item {
+    width: 33%;
+  }
+  .steps ol .list-item .list-item__title {
+    font-size: 14px;
+  }
+  .restaurants {
+    padding: 50px 180px;
+  }
+  .restaurants .container-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 25px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 100px;
+    padding: 50px 50px 0px 0px;
+  }
+  footer .list-group {
+    display: flex;
+    gap: 50px;
+  }
+  footer .list-group ul {
+    display: flex;
+    gap: 20px;
+  }
+  .menu img {
+    height: 375px;
+  }
+  .menu section {
+    margin: -35px 180px 0 180px;
+    padding: 50px 180px;
+  }
+  .menu section h1 {
+    text-align: center;
+  }
+}
+/*MEDIA QUERIES TABLETTE*/
+@media (max-width: 1023px) and (min-width: 768px) {
+  .location {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    box-shadow: none;
+  }
+  .intro h1 {
+    font-size: 30px;
+  }
+  .steps {
+    padding: 50px 180px;
+  }
+  .steps .list-item {
+    gap: 30px;
+  }
+  .steps .list-item .list-item__title {
+    font-size: 18px;
+  }
+  .steps .list-item .list-item__icon {
+    font-size: larger;
+  }
+  .restaurants {
+    padding: 50px 180px;
+  }
+  footer {
+    display: flex;
+    padding: 30px 0px;
+    gap: 50px;
+    justify-content: center;
+  }
+}
+.menu img {
+  height: 375px;
+}
+.menu section {
+  margin: -35px 100px 0px 100px;
+  padding: 50px 100px;
+}
+.menu section h1 {
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
