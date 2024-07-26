@@ -10,6 +10,7 @@ $light-color:#fff;
     padding: 0;
     font-size: 16px;
     font-family: "Roboto", sans-serif;
+    font-weight: 300;
 }
 
 .main-container{
@@ -59,7 +60,7 @@ header{
     img{
         display: block;
         width: 175px;
-       margin:  15px auto;
+        margin:  15px auto;
     }
 }
 
@@ -101,7 +102,6 @@ header{
     
     p{
         color:$dark-color;
-        font-weight: 300;
     }
 }
 
@@ -242,7 +242,6 @@ header{
 
     p{
         font-size: 17px;
-        font-weight: 300;
     }
 }
 
@@ -265,7 +264,6 @@ footer{
 
         li{
             margin-bottom: 5px;
-            font-weight: 300;
         }
     }
 }
@@ -292,3 +290,125 @@ header{
         left: 15px;
     }
 }
+
+.menu{
+    img{
+        height: 175px;
+    }
+
+    section{
+        background-color:$bgcolor;
+        border-radius: 35px 35px 0 0;
+        padding: 35px 20px;
+        margin-top: -35px;
+        position: relative;
+
+    }
+}
+
+.menu{
+    h1{
+        font-family: "Shrikhand", serif;
+        font-size: 23px;
+        font-weight: 400;
+        color: #101010;
+
+        &::after{
+            content: "\f004";
+            font-family:"Font Awesome 6 Free";
+            margin-left: 30px;
+            transition: all .4s ease-in-out;
+        }
+
+        &:hover::after{
+            font-weight: 900;
+            -webkit-background-clip: text;
+            background: linear-gradient($secondary-color,$primary-color);
+            color: transparent;
+            background-clip: text;
+        }
+    }
+}
+
+.menu{
+    article{
+        margin: 25px 0;
+
+        h2{
+            position:relative;
+
+            &::before{
+                content: "";
+                border: 2px solid $tertiary-color;
+                width: 40px;
+                position: absolute;
+                top:25px
+            }
+        }
+
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+    }
+}
+
+.menu{
+    li{
+        background-color:$light-color;
+        border-radius: 15px;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        //align-items: center;
+        //box-shadow: 0 4px 15px rgba(0,0,0,.1);
+        filter: drop-shadow(0 4px 15px rgba(0,0,0,.1));
+        margin:25px 0;
+        overflow: hidden;
+        position: relative;
+
+        .price{
+            color: $dark-color;
+            font-weight: 700;
+            font-size: 15px;
+            position: relative;
+            margin-left: auto;
+            top: 40px;
+            right: 15px;
+          
+            
+        }
+
+        button{
+            width: 60px;
+            height: 100%;
+            background-color: $tertiary-color;
+            border: none;
+            margin-right: -60px;
+
+            i{
+               width: 20px;
+               height: 20px;
+               background-color: $light-color;
+               color: $tertiary-color;
+               align-items: center;
+               border-radius: 50%;
+               padding: 3px;
+               font-size: large;
+            }
+        }
+    }
+}
+
+.menu-description{
+    margin: 15px;
+
+    h3{
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+}
+
+
+
