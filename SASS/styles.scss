@@ -283,3 +283,12 @@ footer{
     font-weight: 400;
 }
 
+/*RESTAURANTS/MENUS*/
+header{
+    position: relative;
+    .fa-arrow-left{
+        position: absolute;
+        bottom: 5px;
+        left: 15px;
+    }
+}
