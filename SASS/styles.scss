@@ -12,6 +12,10 @@ $light-color:#fff;
     font-family: "Roboto", sans-serif;
 }
 
+.main-container{
+    box-sizing: border-box;
+}
+
 a{
     color: inherit;
     text-decoration: none;
@@ -67,7 +71,8 @@ header{
     justify-content: center;
     align-items: center;
     gap:17px;
-    filter: drop-shadow(0 4px 4px rgba(0,0,0,.25),);
+    //filter: drop-shadow(0 4px 4px rgba(0,0,0,.25),);
+    box-shadow:0 4px 4px rgba(0,0,0,.25),0 -2px 4px rgba(0,0,0,.25) ;
     color:$dark-color;
 
     input{
@@ -83,6 +88,7 @@ header{
     padding: 50px;
     background-color:$bgcolor;
     text-align: center;
+    margin-top: 4px;
 
     *{
         margin-bottom: 15px;
