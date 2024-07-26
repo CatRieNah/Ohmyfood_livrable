@@ -240,4 +240,40 @@ header{
     }
 }
 
+/* FOOTER*/
+footer{
+    background-color:$dark-color;
+    color:$light-color;
+    padding: 30px 20px;
+
+    h3{
+        font-family: "Shrikhand", serif;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
+    ul{
+        list-style: none;
+        padding: 0;
+
+        li{
+            margin-bottom: 5px;
+            font-weight: 300;
+        }
+    }
+}
+
+.icon-ustensils{
+    gap:15px;
+}
+
+.icon-handshake{
+    gap:10px;
+}
+
+.icon-ustensils, .icon-handshake{
+    display: flex;
+    font-weight: 400;
+}
 

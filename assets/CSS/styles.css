@@ -209,4 +209,38 @@ header img {
   font-weight: 300;
 }
 
+/* FOOTER*/
+footer {
+  background-color: #353535;
+  color: #fff;
+  padding: 30px 20px;
+}
+footer h3 {
+  font-family: "Shrikhand", serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer ul li {
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+
+.icon-ustensils {
+  gap: 15px;
+}
+
+.icon-handshake {
+  gap: 10px;
+}
+
+.icon-ustensils, .icon-handshake {
+  display: flex;
+  font-weight: 400;
+}
+
 /*# sourceMappingURL=styles.css.map */
