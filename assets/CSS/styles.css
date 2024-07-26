@@ -37,6 +37,11 @@ a {
   margin-bottom: 20px;
 }
 
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
 /* HEADER*/
 header img {
   display: block;
@@ -145,6 +150,62 @@ header img {
   100% {
     transform: rotate(0);
   }
+}
+/*RESTAURANTS*/
+.restaurants {
+  padding: 50px 20px;
+  background-color: #f6f6f6;
+}
+.restaurants .card {
+  background-color: #fff;
+  height: 250px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+.restaurants .card:hover .card-text::after {
+  font-weight: 700;
+  color: transparent;
+  background-clip: text;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+}
+
+.card-image img {
+  height: 175px;
+}
+.card-image p {
+  color: #008766;
+  display: inline-block;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #99E2D0;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.card-text {
+  padding: 13px;
+}
+.card-text::after {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-size: x-large;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  transition: all 0.4s ease-in-out;
+}
+.card-text h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.card-text p {
+  font-size: 17px;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=styles.css.map */
