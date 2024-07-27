@@ -508,4 +508,57 @@ header .fa-arrow-left {
   text-align: center;
 }
 
+/*loader*/
+.loader {
+  background-color: #fff;
+  height: 100%;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.95;
+  animation: loader 0.2s 3s linear forwards;
+}
+.loader .letters span {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px;
+  color: #fff;
+  animation: loader-letters 0.6s ease-in-out alternate infinite;
+}
+.loader .letters span:nth-child(1) {
+  background-color: #9356DC;
+  animation-delay: 0s;
+}
+.loader .letters span:nth-child(2) {
+  background-color: #FF79DA;
+  animation-delay: 0.2s;
+}
+.loader .letters span:nth-child(3) {
+  background-color: #99E2D0;
+  animation-delay: 0.4s;
+}
+
+@keyframes loader-letters {
+  0%, 100% {
+    transform: scale(1) rotateX(0deg);
+  }
+  50% {
+    transform: scale(0.8) rotateX(30deg);
+  }
+}
+@keyframes loader {
+  to {
+    transform: scale(0);
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
