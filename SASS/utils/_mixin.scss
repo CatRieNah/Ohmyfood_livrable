@@ -79,7 +79,7 @@
 @mixin heart{
         content: "\f004";
         font-family: 'Font Awesome 6 Free';
-        transition: all .4s ease-in-out;
+        transition: color .4s ease-in-out ;
 }
 
 @mixin hover-heart{

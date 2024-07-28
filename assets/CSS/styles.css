@@ -93,7 +93,7 @@ img {
 .card-text::after {
   content: "\f004";
   font-family: "Font Awesome 6 Free";
-  transition: all 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
   font-size: x-large;
   position: absolute;
   right: 30px;
@@ -373,7 +373,7 @@ footer ul li a {
 .menu h1::after {
   content: "\f004";
   font-family: "Font Awesome 6 Free";
-  transition: all 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
   margin-left: 30px;
 }
 .menu h1:hover::after {
