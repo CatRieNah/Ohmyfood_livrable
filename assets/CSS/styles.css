@@ -241,6 +241,9 @@ footer ul {
 footer ul li {
   margin-bottom: 5px;
 }
+footer ul li a {
+  font-weight: 300;
+}
 
 .icon-ustensils {
   gap: 15px;
@@ -252,7 +255,9 @@ footer ul li {
 
 .icon-ustensils, .icon-handshake {
   display: flex;
-  font-weight: 400;
+}
+.icon-ustensils p, .icon-handshake p {
+  font-weight: 500;
 }
 
 /*LOCATION*/

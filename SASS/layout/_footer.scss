@@ -18,6 +18,10 @@ footer{
 
         li{
             @include mixin.spacing-margin($margin-bottom:5px);
+
+            a{
+                @include mixin.font($weight:300);
+            }
         }
     }
 }
@@ -32,5 +36,7 @@ footer{
 
 .icon-ustensils, .icon-handshake{
     display: flex;
-    @include mixin.font($weight:400);
+    p{
+        @include mixin.font($weight:500);
+    }
 }
