@@ -3,7 +3,7 @@
 
 /*MEDIA QUERIES/DESKTOP*/
 //Page d'acceuil
-@media (min-width:1024px){
+@media (min-width:1025px){
     .location{
         box-shadow: none;
     }
@@ -89,7 +89,7 @@
 
 /*MEDIA QUERIES TABLETTE*/
 //*Page d'acceuil
-@media (max-width:1023px) and (min-width:768px){
+@media (max-width:1024px) and (min-width:768px){
     .location{
         filter: drop-shadow(0px 4px 4px rgba(0,0,0,.25));
         box-shadow: none;

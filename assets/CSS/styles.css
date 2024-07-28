@@ -468,7 +468,7 @@ footer ul li {
   }
 }
 /*MEDIA QUERIES/DESKTOP*/
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .location {
     box-shadow: none;
   }
@@ -534,7 +534,7 @@ footer ul li {
   }
 }
 /*MEDIA QUERIES TABLETTE*/
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   .location {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     box-shadow: none;
