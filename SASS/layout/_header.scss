@@ -1,0 +1,14 @@
+@use "../utils/mixin";
+/* HEADER page d'acceuil*/
+header{
+    img{
+        display: block;
+        @include mixin.dimensions($width:175px);
+        @include mixin.spacing-margin($margin:15px auto);
+    }
+}
+
+/*RESTAURANTS/MENUS*/
+header{
+    position: relative;
+}

@@ -1,0 +1,101 @@
+@use "variables";
+
+@mixin font($size:null,$weight:null){
+    @if $size != null{
+        font-size: $size;
+    }
+    @if $weight != null{
+        font-weight: $weight;
+    }
+}
+
+@mixin spacing-margin($margin:null,$margin-top:null,$margin-right:null,$margin-bottom:null,$margin-left:null){
+    @if $margin != null{
+        margin:$margin;
+    }
+    @if $margin-top != null{
+        margin-top:$margin-top;
+    }
+    @if $margin-right != null{
+        margin-right:$margin-right;
+    }
+    @if $margin-bottom != null{
+        margin-bottom:$margin-bottom;
+    }
+    @if $margin-left != null{
+        margin-left:$margin-left;
+    }
+}
+
+@mixin spacing-padding($padding:null){
+    @if $padding!= null{
+       padding:$padding;
+    }
+   
+}
+
+@mixin center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin dimensions($width:null,$height:null){
+    @if $width != null{
+        width: $width;
+    }
+    @if $height != null{
+        height: $height;
+    }
+}
+
+@mixin circle($diameter){
+    width:$diameter;
+    height: $diameter;
+    border-radius: 50%;
+}
+
+@mixin button{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 185px;
+    border-radius: 25px;
+    background: linear-gradient(variables.$secondary-color,variables.$primary-color);
+    border: none;
+    color:variables.$light-color ;
+    box-shadow: 0 4px 10px rgba(0,0,0,.25);
+    margin-top: 20px;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+
+    &:hover{
+        filter: brightness(1.15) drop-shadow(0 4px 10px rgba(0,0,0,.25));
+    }
+}
+
+@mixin heart{
+        content: "\f004";
+        font-family: 'Font Awesome 6 Free';
+        transition: all .4s ease-in-out;
+}
+
+@mixin hover-heart{
+    font-weight: 700;
+    color: transparent;
+    background-clip: text;
+    background: linear-gradient(variables.$secondary-color,variables.$primary-color);
+    -webkit-background-clip: text;
+}
+
+@mixin ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+}
+
+
+
+

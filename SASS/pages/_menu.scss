@@ -1,0 +1,36 @@
+@use "../utils/mixin";
+@use "../utils/variables";
+/*Menu page*/
+.menu{
+    img{
+        @include mixin.dimensions($height:175px);
+    }
+
+    section{
+        background-color:variables.$bgcolor;
+        border-radius: 35px 35px 0 0;
+        @include mixin.spacing-padding($padding:35px 20px);
+        @include mixin.spacing-margin($margin-top:-35px);
+        position: relative;
+    }
+}
+
+.menu{
+    h1{
+        font-family: "Shrikhand", serif;
+        @include mixin.font($size:23px,$weight:400);
+        color: #101010;
+        cursor: pointer;
+        animation: size .6s ease-in;
+
+        &::after{
+            @include mixin.heart;
+            @include mixin.spacing-margin($margin-left:30px);
+        }
+        
+        &:hover::after{
+           @include mixin.hover-heart;
+        }
+        
+    }
+}

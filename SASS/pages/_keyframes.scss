@@ -1,0 +1,56 @@
+/* animation icone fonctionnement*/
+@keyframes oscillation{
+    0%{
+        transform: rotate(-25deg) ;
+    }
+    50%{
+        transform: rotate(0deg) ;
+    }
+    75%{
+        transform: rotate(25deg);
+    }
+    100%{
+        transform: rotate(0) ;
+    }
+
+}
+
+/* Animation menu*/
+@keyframes move-down{
+    from {
+        opacity: 0;
+        transform: translateY(-100vh) scale(0); //départ vers le haut de l'écran
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);// arrivée à la position initiale 
+    }
+}
+
+/*animation H1 menu*/
+@keyframes size{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+/*Animation loader*/
+
+@keyframes loader-letters{
+    0%, 100% {
+        transform: scale(1) rotateX(0deg)
+    }
+    50% {
+        transform: scale(0.8) rotateX(50deg);
+    }
+   
+}
+
+@keyframes loader{
+    to{
+       transform:scale(0);
+    }
+}

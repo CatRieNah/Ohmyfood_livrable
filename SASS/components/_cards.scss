@@ -1,0 +1,155 @@
+@use "../utils/mixin";
+@use "../utils/variables";
+/*Restaurants*/
+.card{
+    background-color: variables.$light-color;
+    @include mixin.dimensions($height:250px);
+    border-radius: 15px;
+    box-shadow:(0px 4px 15px rgba(0,0,0,.1));
+    @include mixin.spacing-margin($margin-bottom:15px);
+    overflow: hidden;
+    position: relative;
+
+    &:hover .card-text::after{
+        @include mixin.hover-heart;
+    }
+}
+
+.card-image{
+    img{
+        @include mixin.dimensions($height:175px);
+    }
+
+    p{
+        color: #008766;
+        display: inline-block;
+        @include mixin.spacing-padding($padding:5px);
+        @include mixin.font($size:14px,$weight:500);
+        background-color: variables.$tertiary-color;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+}
+
+.card-text{
+    @include mixin.spacing-padding($padding:13px);
+
+    &::after{
+        @include mixin.heart;
+        @include mixin.font($size:x-large);
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+    }
+
+    h3{
+        @include mixin.font($size:18px);
+        @include mixin.spacing-margin($margin-bottom:5px);
+    }
+
+    p{
+        @include mixin.font($size:17px);
+    }
+}
+
+/* Menu restaurants*/
+.menu{
+    article{
+        @include mixin.spacing-margin($margin:25px 0);
+
+        h2{
+            position:relative;
+
+            &::before{
+                content: "";
+                border: 2px solid variables.$tertiary-color;
+                @include mixin.dimensions($width:40px);
+                position: absolute;
+                top:25px
+            }
+        }
+
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+    }
+
+    .btn-order{
+        text-align: center;
+    }
+}
+.menu{
+    li{
+        background-color:variables.$light-color;
+        border-radius: 15px;
+        @include mixin.dimensions($height:72px);
+        @include mixin.center;
+        //box-shadow: 0 4px 15px rgba(0,0,0,.1);
+        filter: drop-shadow(0 4px 15px rgba(0,0,0,.1));
+        @include mixin.spacing-margin($margin:25px 0);
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        animation: move-down 1s ease-in-out;
+
+        &:nth-child(1){
+            animation-delay: 0s;
+        }
+
+        &:nth-child(2){
+            animation-delay: 0.2s;
+        }
+        &:nth-child(3){
+            animation-delay: 0.4s;
+        }
+
+        &:hover button{
+            margin-right: 0;
+        }
+
+        .price{
+            color:variables.$dark-color;
+            @include mixin.font($size:15px,$weight:700);
+            position: relative;
+            @include mixin.spacing-margin($margin-left:auto);
+            top: 13px;
+            right: 15px; 
+        }
+
+        button{
+            @include mixin.dimensions($width:15%,$height:100%);
+            background-color:variables.$tertiary-color;
+            border: none;
+            @include mixin.center;
+            @include mixin.spacing-margin($margin-right:-15%);
+            transition: margin-right .4s ease-in-out;
+
+            i{
+               @include mixin.circle(20px);
+               background-color: variables.$light-color;
+               color:variables.$tertiary-color;
+               @include mixin.center;
+               @include mixin.spacing-padding($padding:3px);
+               @include mixin.font($size:large);
+            }
+        }
+    }
+}
+
+.menu-description{
+    @include mixin.spacing-margin($margin:15px);
+    @include mixin.dimensions($width:80%);
+    @include mixin.ellipsis;
+
+
+    h3{
+        @include mixin.spacing-margin($margin-bottom:5px);
+        @include mixin.font($size:18px);
+    }
+
+    h3,p{
+        @include mixin.ellipsis;
+    }
+}

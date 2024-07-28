@@ -1,0 +1,36 @@
+@use "../utils/mixin";
+@use "../utils/variables";
+/* FOOTER*/
+footer{
+    background-color:variables.$dark-color;
+    color:variables.$light-color;
+    @include mixin.spacing-padding(30px 20px);
+
+    h3{
+        font-family: "Shrikhand", serif;
+        @include mixin.font($size:18px);
+        @include mixin.spacing-margin($margin-bottom:15px);
+    }
+
+    ul{
+        list-style: none;
+        padding: 0;
+
+        li{
+            @include mixin.spacing-margin($margin-bottom:5px);
+        }
+    }
+}
+
+.icon-ustensils{
+    gap:15px;
+}
+
+.icon-handshake{
+    gap:10px;
+}
+
+.icon-ustensils, .icon-handshake{
+    display: flex;
+    @include mixin.font($weight:400);
+}

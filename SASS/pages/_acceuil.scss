@@ -1,0 +1,98 @@
+@use "../utils/mixin";
+@use "../utils/variables";
+
+/*LOCATION*/
+.location{
+    @include mixin.dimensions($height:50px);
+    background-color: #eaeaea;
+    @include mixin.center;
+    gap:17px;
+    //filter: drop-shadow(0 4px 4px rgba(0,0,0,.25),);
+    box-shadow:0 4px 4px rgba(0,0,0,.25),0 -2px 4px rgba(0,0,0,.25) ;
+    color:variables.$dark-color;
+
+    input{
+        border: none;
+        background-color: #eaeaea;
+        @include mixin.font($size:14px);
+    }
+}
+
+/* Intro*/
+.intro{
+    @include mixin.spacing-padding($padding:50px);
+    background-color:variables.$bgcolor;
+    text-align: center;
+    margin-top: 4px;
+    @include mixin.spacing-margin($margin-top:4px);
+
+    *{
+        @include mixin.spacing-margin($margin-bottom:15px)
+    }
+
+    h1{
+        @include mixin.font($size:24px);
+    }
+    
+    p{
+        color:variables.$dark-color;
+    }
+}
+
+
+/*FONCTIONNEMENT*/
+.steps{
+    @include mixin.spacing-padding($padding:50px 20px);
+
+    ol{
+        list-style: none; /* anule la numérotation par défaut de la balise ol*/
+        counter-reset: steps-counter; /* Réinitialiser le compteur à 0. Cela permet de commencer la numérotation à partir de 1*/
+        padding: 0;
+    }
+}
+
+.list-item{
+    @include mixin.dimensions($height:70px);
+    border-radius: 20px;
+    background-color:variables.$bgcolor;
+    @include mixin.center;
+    gap: 20px;
+    @include mixin.spacing-margin($margin-bottom:30px);
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,.15);
+    cursor: pointer;
+
+    &::before{
+        counter-increment: steps-counter; /* Incrementer le compteur de 1 pour chaque élément de la liste*/
+        content: counter(steps-counter); /* Elément à ajouter: compteur personnalisé*/
+        position: absolute;
+        left: -10px;
+        @include mixin.font($size:14px);
+        color:variables.$light-color;
+        @include mixin.circle(24px);
+        background-color:variables.$primary-color;
+        @include mixin.center;
+    }
+
+    &__icon{
+        color: #7e7e7e;
+
+        i{
+            @include mixin.font($size:large);
+        }
+    }
+    
+    &:hover &__icon{
+        color: #9356DC;
+        animation:oscillation .4s linear 2;
+    }
+}
+
+
+/*RESTAURANTS*/
+.restaurants{
+    @include mixin.spacing-padding($padding:50px 20px);
+    background-color:variables.$bgcolor;
+}
+
+

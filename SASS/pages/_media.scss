@@ -1,0 +1,143 @@
+@use "../utils/mixin";
+@use "../utils/variables";
+
+/*MEDIA QUERIES/DESKTOP*/
+//Page d'acceuil
+@media (min-width:1024px){
+    .location{
+        box-shadow: none;
+    }
+
+    .intro{
+        margin-top: 0;
+        @include mixin.spacing-padding($padding:25px);
+
+        h1{
+            @include mixin.font($size:40px)            
+        }
+
+        p{
+            @include mixin.font($size:18px);
+        }
+    }
+
+    .steps{
+        @include mixin.spacing-padding($padding:50px 180px);
+        ol{
+            display: flex;
+            gap: 25px;
+
+            .list-item{
+                @include mixin.dimensions($width:33%);
+                justify-content: flex-start;
+
+                .list-item__icon{
+                    @include mixin.spacing-margin($margin-left:40px);
+                    i{
+                        @include mixin.font($size:x-large);
+                    }
+                }
+            }
+        }
+    }
+
+    .restaurants{
+        @include mixin.spacing-padding($padding:50px 180px);
+
+        .container-cards{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 75px;
+            row-gap: 35px;
+        }
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+        gap:100px;
+        @include mixin.spacing-padding($padding:50px 50px 0 0);
+
+        .list-group{
+            display: flex;
+            gap:50px;
+
+            ul{
+                display: flex;
+                gap:20px;
+            }
+        }
+    }
+
+// MENU RESTAURANTS
+    .menu{
+        img{
+            @include mixin.dimensions($height:375px)
+        }
+
+        section{
+            @include mixin.spacing-margin($margin:-35px 180px 0 180px);
+            @include mixin.spacing-padding($padding:50px 180px);
+
+            h1{
+                text-align: center;
+            }
+        }
+
+    }
+}
+
+/*MEDIA QUERIES TABLETTE*/
+//*Page d'acceuil
+@media (max-width:1023px) and (min-width:768px){
+    .location{
+        filter: drop-shadow(0px 4px 4px rgba(0,0,0,.25));
+        box-shadow: none;
+    }
+
+    .intro{
+        h1{
+            @include mixin.font($size:30px);
+        }
+    }
+
+    .steps{
+        @include mixin.spacing-padding($padding:50px 180px);
+
+        .list-item{
+            gap: 30px;
+
+            .list-item__title{
+                @include mixin.font($size:14px);
+            }
+        }
+    }
+
+    .restaurants{
+        @include mixin.spacing-padding($padding:50px 180px);
+    }
+
+    footer{
+        display: flex;
+        @include mixin.spacing-padding($padding:30px 0);
+        gap:50px;
+        justify-content: center;
+    }
+
+    .menu{
+        img{
+            @include mixin.dimensions($height:375px)
+        }
+    
+        section{
+            @include mixin.spacing-margin($margin:-35px 100px 0 100px);
+            @include mixin.spacing-padding($padding:50px 100px);
+    
+            h1{
+                text-align: center;
+            }
+        }
+    } 
+}
+
+

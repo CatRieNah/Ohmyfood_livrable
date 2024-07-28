@@ -1,0 +1,42 @@
+@use "../utils/mixin";
+@use "../utils/variables";
+
+/*loader*/
+.loader{
+    background-color:variables.$light-color;
+    @include mixin.dimensions($width:100%);
+    position:fixed;
+    inset: 0; // pour top, bottom,left,right sont nuls
+    z-index: 1; // pour se positionner en dessus
+    @include mixin.center;
+    opacity: 0.95;
+    animation: loader 0.2s 3s linear forwards;
+
+
+    .letters{
+        span{
+            @include mixin.circle(35px);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            @include mixin.font($size:20px,$weight:bold);
+            @include mixin.spacing-margin($margin:15px);
+            color:variables.$light-color;
+            animation: loader-letters .6s ease-in-out alternate infinite;
+            
+
+            &:nth-child(1){
+                background-color:variables.$primary-color;
+                animation-delay:0s
+            }
+            &:nth-child(2){
+                background-color:variables.$secondary-color;
+                animation-delay: .2s;
+            }
+            &:nth-child(3){
+                background-color:variables.$tertiary-color;
+                animation-delay: .4s;
+            }
+        }
+    }
+}
