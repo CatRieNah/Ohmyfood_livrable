@@ -9,6 +9,7 @@
     @include mixin.spacing-margin($margin-bottom:15px);
     overflow: hidden;
     position: relative;
+    cursor: pointer;
 
     &:hover .card-text::after{
         @include mixin.hover-heart;
